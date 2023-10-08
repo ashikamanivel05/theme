@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+.dark-mode {
+            background-color: black;
+            color:white ;
+        }
+.light-mode {
+            background-color:white ;
+            color:black ;
+        }
+button {
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body class="light-mode">
+    <h1>Dark/Light Mode Portal</h1>
+    <p>Home page of the screen...!</p>
+    <button onclick="Mode()"> Dark mode</button>
+
+<script>
+        function Mode() {
+            const body = document.body;
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+            } 
+            else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+            }
+        }
+</script>
+</body>
+</html>
